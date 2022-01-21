@@ -1,5 +1,6 @@
 import jdk.jshell.Snippet;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
@@ -9,9 +10,21 @@ public class Main {
 
     public static void main(String[] args) {
 
+        Student student1 = new Student(new Osoba("Marcin","Kowalski",33),Enum.WydzialEnum.WYDZIAL_INFORMATYKI);
+        Student student2 = new Student(new Osoba("Andrzej","Jaroslawski",33),Enum.WydzialEnum.WYDZIAL_ARTYSTYCZNY);
+        Student student3 = new Student(new Osoba("Szymon","Andrzejewski",33),Enum.WydzialEnum.WYDZIAL_MATEMATYKI);
+        Student student4 = new Student(new Osoba("Olgierd","Malinski",33),Enum.WydzialEnum.WYDZIAL_POLONISTYKI);
+        Student student5 = new Student(new Osoba("Pawel","Malinski",33),Enum.WydzialEnum.WYDZIAL_FIZYKI);
+        ArrayList<Student> aL = new ArrayList<>();
+        aL.add(student1);
+        aL.add(student2);
+        aL.add(student3);
+        aL.add(student4);
+        aL.add(student5);
 
-
-
+        for(Student s : aL){
+            System.out.println(s + "\n");
+        }
     }
 }
 
